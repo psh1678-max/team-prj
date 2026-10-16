@@ -103,11 +103,11 @@ with st.expander("예시 데이터로 화면 미리보기", expanded=False):
 
 with st.form("analysis_form"):
     st.markdown("<div class='section-title'>01 · 개발 요청 입력</div><div class='section-sub'>변경 요청과 테스트 맥락을 입력하세요.</div>", unsafe_allow_html=True)
-    request_text = st.text_area("개발 요청 내용 *", value="금융 상품별 신청 프로세스 간소화", height=110)
-    change = st.text_area("개발 변경 내용", value="금융 상품별 신청 프로세스", height=85)
+    request_text = st.text_area("개발 요청 내용 *", placeholder="예: 금융 상품별 신청 프로세스 간소화", height=110)
+    change = st.text_area("개발 변경 내용", placeholder="예: 카드론·사업자대출 신청 절차와 상세 페이지 개선", height=85)
     c1, c2 = st.columns(2)
-    system = c1.text_input("테스트 대상 시스템", value="현대카드 앱")
-    conditions = c2.text_input("업무 조건", value="본인인증 단계 필수 포함")
+    system = c1.text_input("테스트 대상 시스템", placeholder="예: 현대카드 앱")
+    conditions = c2.text_input("업무 조건", placeholder="예: 본인인증 단계 필수 포함")
     submitted = st.form_submit_button("AI 분석 시작 →", use_container_width=True, type="primary")
 
 if submitted:
