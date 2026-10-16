@@ -10,7 +10,7 @@ from openai import OpenAI
 ROOT = Path(__file__).resolve().parent
 load_dotenv(ROOT / "2.env")
 
-st.set_page_config(page_title="ChangeScope | 개발 영향도 분석", page_icon="◆", layout="wide")
+st.set_page_config(page_title="개발 영향도 파악 및 테스트 서비스", page_icon="◆", layout="wide")
 st.markdown("""
 <style>
   .stApp { background:#f7f8fa; color:#172130; }
@@ -61,7 +61,7 @@ def bullets(values, fallback):
 
 
 st.markdown("<div class='brand'><span>◆</span> ChangeScope</div>", unsafe_allow_html=True)
-st.markdown("<div class='hero'><p class='eyebrow'>ANALYZE · PLAN · VERIFY</p><h1>변경의 파급 범위를<br><em>명확하게.</em></h1><p class='sub'>개발 요청을 분석해 영향도와 테스트 준비 항목을 한눈에 정리합니다.</p></div>", unsafe_allow_html=True)
+st.markdown("<div class='hero'><p class='eyebrow'>ANALYZE · PLAN · VERIFY</p><h1>개발 영향도 파악 및 테스트 서비스</h1><p class='sub'>개발 요청을 분석해 영향도와 테스트 준비 항목을 한눈에 정리합니다.</p></div>", unsafe_allow_html=True)
 
 demo_report = {
     "summary": "[예시 데이터] 고객 연락처 변경 흐름에서 고객정보 갱신과 알림 발송을 검증하는 테스트 계획입니다. 아래 시스템·API 연결은 화면 확인을 위한 가상 예시입니다.",
